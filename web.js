@@ -5,7 +5,7 @@ var content;
 
 var app = express.createServer(express.logger());
 
-fs.readFileSync('index.html', function(err, data){
+fs.readFileSync('index.html', function read(err, data){
  content = data;
 });
 
