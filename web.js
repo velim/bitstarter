@@ -5,9 +5,9 @@ var content;
 
 var app = express.createServer(express.logger());
 
-fs.readFileSync('index.html', function read(err, data)){
+fs.readFileSync('index.html', function read(err, data){
  content = data;
-}
+});
 
 buffer = new Buffer(content)
 
