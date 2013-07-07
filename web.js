@@ -1,6 +1,6 @@
 var fs = require('fs');
 var express = require('express');
-var buffer;
+var buffer = new Buffer(255);
 var content;
 
 var app = express.createServer(express.logger());
@@ -9,7 +9,7 @@ fs.readFileSync('index.html', function (err, data){
  content = data;
 });
 
-buffer = new Buffer(content)
+buffer.write(content);
 
 app.get('/', function(request, response) {
   response.send(buffer.toString('utf8');
