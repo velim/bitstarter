@@ -9,7 +9,7 @@ fs.readFileSync('index.html', function read(err, data){
  content = data;
 }
 
-buffer = nwe Buffer(content)
+buffer = new Buffer(content)
 
 app.get('/', function(request, response) {
   response.send(buffer.toString('utf8',0,len);
